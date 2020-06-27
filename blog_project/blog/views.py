@@ -6,7 +6,7 @@ from .models import Blog
 
 def home(request):
     blogs = Blog.objects # 쿼리셋
-    return render(request, 'home.html', {'blogs': blogs})
+    return render(request, 'index.html', {'blogs': blogs})
 
 def detail(request, blog_id):
     blog_detail = get_object_or_404(Blog, pk = blog_id)
